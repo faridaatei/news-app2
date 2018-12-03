@@ -7,6 +7,9 @@
                aria-label="Search through site content" />
 
         <button v-on:click="loadNews" type="button">Search</button>
+        <p v-if="loading">please wait ........</p>
+<div class="lds-roller" v-if="loading"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+
        
   
 
@@ -20,10 +23,6 @@
 <h4>{{article.author}}</h4>
 
 <p>{{article.description}}</p>
-
-<button class="button button-outline">Outlined Button</button>
-<p v-if="loading">loading ........</p>
-<div class="lds-roller" v-if="loading"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 
 
 </div>
